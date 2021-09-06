@@ -56,18 +56,17 @@ export const printPost = (post) => {
   postTemplate.innerHTML = areaOfPost;
 
   const userId = firebase.auth().currentUser.uid;
-  const likeBtn = postTemplate.querySelector('.btn-like');
+
   const editButton = postTemplate.querySelector(`[data-edit="${post.id}"]`);
   const saveButton = postTemplate.querySelector(`[data-save="${post.id}"]`);
-  const deleteButton = postTemplate.querySelector(`[data-delete="${post.id}"]`);
   const postText = postTemplate.querySelector(`[data-textpost="${post.id}"]`);
-  console.log(postText.innerText);
+  const deleteButton = postTemplate.querySelector(`[data-delete="${post.id}"]`);
+  const likeBtn = postTemplate.querySelector('.btn-like');
+  const likeIcon = postTemplate.querySelector(`.btn-like i[data-like="${post.id}"]`);
+  const likeCount = postTemplate.querySelector(`[data-numLike="${post.id}"]`);
+  const likesNumber = Number(likeCount.innerText);
 
   likeBtn.addEventListener('click', () => {
-    const likeCount = postTemplate.querySelector(`[data-numLike="${post.id}"]`);
-    const likeIcon = postTemplate.querySelector(`.btn-like i[data-like="${post.id}"]`);
-    const likesNumber = Number(likeCount.innerText);
-
     if (!likeArray.includes(userId)) {
       likePost(userId, post.id)
         .then(() => {
@@ -87,6 +86,12 @@ export const printPost = (post) => {
         .catch('error');
     }
   });
+
+  if (likeArray.includes(userId)) {
+    likeIcon.classList.add('fas');
+  } else {
+    likeIcon.classList.add('far');
+  }
 
   editButton.addEventListener('click', () => {
     postText.setAttribute('contentEditable', '');

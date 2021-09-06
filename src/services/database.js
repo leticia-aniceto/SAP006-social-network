@@ -25,12 +25,6 @@ export const deletePost = (postId) => firebase
   .doc(postId)
   .delete();
 
-export const getLikes = (postId) => firebase
-  .firestore()
-  .collection('posts')
-  .doc(postId)
-  .get();
-
 export const likePost = (userId, postId) => firebase
   .firestore()
   .collection('posts')
