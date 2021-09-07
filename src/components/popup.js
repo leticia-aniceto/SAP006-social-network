@@ -46,8 +46,7 @@ export const modal = {
 };
 
 export const deleteConfirm = (idPost, post) => {
-  modal.confirm('Essa postagem será excluída, deseja continuar?', () => { 
-    // const postDiv = rootElement.querySelector(`[data-id="${deleteId}"]`);
+  modal.confirm('Essa postagem será excluída, deseja continuar?', () => {
     deletePost(idPost)
       .then(() => post.remove());
   });

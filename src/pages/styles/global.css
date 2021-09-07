@@ -52,7 +52,6 @@ ol, ul {
 	list-style: none;
 }
 
-.form-input-newpost, 
 .reset-input-layout, 
 .login-input-email, 
 .login-input-password, 
@@ -68,6 +67,6 @@ ol, ul {
   font-size: medium;
   color: var(--color-gray);
   padding: 5%;
-  margin: 1% 4% 3%;
+  margin: 2%;
   display: inline-flex;
 }

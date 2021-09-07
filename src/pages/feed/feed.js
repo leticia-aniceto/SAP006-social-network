@@ -2,29 +2,31 @@ import {
   addPosts, loadPosts, searchPosts,
 } from '../../services/database.js';
 import { printPost } from '../../components/feedcomponent.js';
-import { logout } from '../../services/authentication.js';
+import { logout, uploadPicture, downloadPicture } from '../../services/authentication.js';
 
 export const Feed = () => {
   const rootElement = document.createElement('div');
   const container = `
     <header class="searchBell">
       <input type="search" id="input-search" class="searchBar btn-search-icon" name="searchPost" placeholder="Pesquise no Fort">
-      <button id="search">
-        <span class="iconify" data-icon="akar-icons:search" style="color: #706f6b;"></span>
-      </button>
-      <button class="btn-logout">
-        <span class="iconify logout-icon-bcgcolor" data-icon="ic:round-logout" style="color: #f78563;"></span>
+      <button id="search" class="search">
+        <span class="iconify" data-icon="akar-icons:search"></span>
       </button>
     </header>
     <hr class="line">
     <section class="post">
-      <form action="" id="published-form">
+      <div class="post-before">
+        <p>POST</p>
+      </div>
+
+      <form action="" id="published-form" class="published-form">
         <input type="text" id="text-post" name="new-post" class="form-input-newpost" placeholder="Mana, o que você quer compatilhar?">
         <p class="warn-input-add" hidden>Por favor, digite algo para compartilhar.</p>
-        <button class="btn" id="send-post">Enviar</button>
+        <button class="btn-send" id="send-post">Enviar</button>
       </form>
     </section>
-    <h4>POSTAGENS RECENTES</h4>
+
+    <h4 class="recent">POSTAGENS RECENTES</h4>
    
     <div class="search-result"></div>
     
@@ -34,37 +36,70 @@ export const Feed = () => {
 
     <nav class="navbar mobile-list">
       <ul>
-        <li>
+        <li id="homeBtn">
           <span class="iconify" data-inline="false" data-icon="akar-icons:home" style="color: #FFD2BF;">
           </span>
         </li>
-        <li>
-          <a href="#text-post"><span class="iconify" id="new-post-btn" data-inline="false" data-icon="clarity:plus-circle-line"></a>
+        <li id="newPostButton">
+          <span class="iconify" id="new-post-btn" data-inline="false" data-icon="clarity:plus-circle-line"></a>
           </span>
         </li>
-        <li>
-          <span class="iconify" data-inline="false" data-icon="akar-icons:person" style="color: #FFD2BF;">
+        <li id="profilebtn">
+          <span class="iconify" id="profile-btn" data-inline="false" data-icon="akar-icons:person" style="color: #FFD2BF;">
           </span>
         </li>
       </ul>
     </nav>
+
+    <section class="profile-section" id="profile-section">
+      <div class="profile-img-container">
+        <img src="../../img/logo.png" class="profile-img">
+
+        <div class='input-wrapper'>
+          <label for='input-file'>
+            Seleciona aquela foto mara!
+          </label>
+          <input type="file" name="arquivo" id="input-file" class="profile-pic">
+        </div>
+      </div>
+
+      <input type="text" class="profile-username" placeholder="Nome de usuária...">
+
+      <div class="profile-buttons">
+        <button class="btn-logout">
+          <span class="iconify logout-icon-bcgcolor" data-icon="ic:round-logout" style="color: #f78563; background-color: white;"></span>
+        </button>
+
+
+        <button class="profile-save">Salvar</buton>
+      </div>
+    </section>
     `;
 
   rootElement.innerHTML = container;
 
   const postTemplate = rootElement.querySelector('#postTemplate');
+  const postSection = rootElement.querySelector('.post');
 
-  const searchButton = rootElement.querySelector('#search');
+  const currentUser = firebase.auth().currentUser;
+  const useruid = currentUser.uid;
+  const displayName = currentUser.displayName;
+  const photo = currentUser.photoURL;
+
   const containerSearch = rootElement.querySelector('.search-result');
+  const searchButton = rootElement.querySelector('#search');
 
   searchButton.addEventListener('click', () => {
     const textSearched = rootElement.querySelector('#input-search').value;
     const termsArray = textSearched.toLowerCase().split(' ');
+    const postagensRecentes = rootElement.querySelector('.recent');
+    postagensRecentes.style.display = 'none';
 
     containerSearch.innerHTML = `
       <span class="result-text">Resultados para ${textSearched}: </span>
       `;
 
+    postTemplate.innerHTML = '';
     searchPosts(termsArray)
       .then((snap) => {
         snap.forEach((doc) => {
@@ -77,6 +112,7 @@ export const Feed = () => {
             date: doc.data().date,
             comments: doc.data().comments,
             terms: doc.data().text.toLowerCase().split(' '),
+            photoPost: doc.data().photoURL,
           };
 
           const print = printPost(obj);
@@ -94,9 +130,7 @@ export const Feed = () => {
   submitButton.addEventListener('submit', (event) => {
     event.preventDefault();
     const text = rootElement.querySelector('#text-post').value;
-    const useruid = firebase.auth().currentUser.uid;
     const date = new Date();
-    const displayName = firebase.auth().currentUser.displayName;
     const post = {
       text,
       user_id: useruid,
@@ -105,6 +139,7 @@ export const Feed = () => {
       comments: [],
       terms: text.toLowerCase().split(' '),
       displayName,
+      photo,
     };
 
     const textValidationAddPost = rootElement.querySelector('.warn-input-add');
@@ -123,6 +158,49 @@ export const Feed = () => {
           postTemplate.prepend(element);
         });
     }
+
+    postSection.style.display = 'none';
+
+    const textClear = rootElement.querySelector('#text-post');
+    textClear.value = '';
+  });
+
+  const homeBtn = rootElement.querySelector('#homeBtn');
+  homeBtn.addEventListener('click', () => {
+    postTemplate.style.display = 'flex';
+    postSection.style.display = 'none';
+  });
+
+  const newPostButton = rootElement.querySelector('#newPostButton');
+
+  newPostButton.addEventListener('click', () => {
+    postTemplate.style.display = 'none';
+    postSection.style.display = 'block';
+  });
+
+  const profileBtn = rootElement.querySelector('#profilebtn');
+  const profileSection = rootElement.querySelector('#profile-section');
+  const inputImg = rootElement.querySelector('.profile-img');
+  const input = rootElement.querySelector('label[for="input-file"]');
+
+  function showPhoto() {
+    if (photo) {
+      inputImg.src = photo;
+    }
+  }
+  showPhoto();
+
+  input.addEventListener('change', (e) => {
+    const { target } = e;
+    const file = target.files[0];
+    uploadPicture(useruid, file);
+    downloadPicture(useruid, currentUser);
+    showPhoto();
+  });
+
+  profileBtn.addEventListener('click', () => {
+    postTemplate.style.display = 'none';
+    profileSection.style.display = 'block';
   });
 
   loadPosts()
@@ -150,6 +228,26 @@ export const Feed = () => {
       navbarBottom.classList.add('sticky');
     }
   }
+
+  loadPosts()
+    .then((snap) => {
+      snap.forEach((doc) => {
+        const post = {
+          id: doc.id,
+          text: doc.data().text,
+          user_id: doc.data().user_id,
+          likes: doc.data().likes,
+          date: doc.data().date,
+          comments: doc.data().comments,
+          displayName: doc.data().displayName,
+          photoPost: doc.data().photoURL,
+        };
+
+        const print = printPost(post);
+        postTemplate.appendChild(print);
+      });
+    });
+
   window.onscroll = stickyFilter();
 
   return rootElement;

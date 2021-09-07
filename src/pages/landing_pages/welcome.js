@@ -13,9 +13,9 @@ export const Welcome = () => {
           Bem-vinda, mulher!
         </header>
         <main class="welcome-paragraph">
-          <p class="text-welcome">Fort é uma rede social exclusiva para mulheres!</p> 
+          <p>Fort é uma rede social exclusiva para mulheres!</p> 
         
-          <button class="btn-continue btn-continue-welcome" id="btn-continue">Continuar</button>
+          <button class="btn-continue" id="btn-continue">Continuar</button>
 
           <button class="skipbutton">Pular</button>
         </section>

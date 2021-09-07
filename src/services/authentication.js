@@ -58,3 +58,24 @@ export const resetPassword = (email) => {
     .auth()
     .sendPasswordResetEmail(email);
 };
+
+export const uploadPicture = (userId, file) => {
+  firebase
+    .storage()
+    .ref(`images/${userId}`)
+    .put(file);
+};
+
+export const downloadPicture = (userId, currentUser) => {
+  firebase
+    .storage()
+    .ref()
+    .child(`images/${userId}`)
+    .getDownloadURL()
+    .then((url) => {
+      currentUser
+        .updateProfile({
+          photoURL: url,
+        });
+    });
+};
