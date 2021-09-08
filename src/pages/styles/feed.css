@@ -2,8 +2,54 @@
   background-color: var(--color-background);
 }
 
+.side-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0% 2%;
+  width: 25%;
+  background-color: #FFD2BF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.text-sideBar {
+  margin-left: 2vh;
+  font-size: 1.2em;
+}
+
+.text-logout-sidebar {
+  font-size: 1.2em;
+  margin-right: 2vh;
+}
+
+.item-side-navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #706f6b;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.item-side-navbar.active {
+  background-color: #FFEBE3;
+  color: #706f6b;
+} 
+
+.username-sidebar {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+
 header {
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   margin-top: 10px;
   display: flex;
@@ -14,7 +60,6 @@ header {
 
 .searchBar {
   width: 70%;
-  max-width: 250px;
   height: 10vw;
   max-height: 40px;
   padding: 0.5em;
@@ -34,15 +79,17 @@ header {
   background-color: var(--color-background);
 }
 
-.btn-search-icon {
-}
-
 .search {
   background-color: var(--color-background);
 }
 
 input.searchBar {
   box-shadow: none;
+}
+
+.logo-searchBar {
+  width: 10vh;
+  height: 10vh;
 }
 
 .btn-logout {
@@ -58,7 +105,7 @@ input.searchBar {
 }
 
 .line {
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 1px solid #80808054;
   margin: 0;
 }
 
@@ -154,6 +201,10 @@ section#postTemplate {
   width: 100%;
 }
 
+.header-post-like {
+  width: 100%;
+}
+
 .published-form {
   margin-top: 10%;
   background-color: var(--color-white);
@@ -164,7 +215,7 @@ section#postTemplate {
 
 .header-post {
   display: flex;
-  width: 100%;
+  width: 96%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -213,9 +264,9 @@ button#btn-drop {
   display: inline-end;
   float: right;
 }
-.dropbtn, .btn-like, .post-content {
+/* .dropbtn, .btn-like, .post-content {
   background-color: var(--color-white);
-}
+} */
 
 .post-content {
   width: 100%;
@@ -260,14 +311,16 @@ textarea {
   overflow: scroll;
 }
 
-.box {
-  width: 42vh;
-  height: 15vh;
+.mainBox {
+  width: 98%;
+  height: max-content;
   background: var(--color-white);
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin: 4% 0;
-  padding: 2% 0 2% 2%;
+  margin: 3% 0;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   /* text-align: -webkit-center; */
 }
 
@@ -354,6 +407,10 @@ section.actions {
   background-color: var(--color-white);
 }
 
+button.btn-like {
+  margin-left: 0.5vh;
+}
+
 nav {
   width: 100%;
   height: 72px;
@@ -380,12 +437,12 @@ ul {
 
  .container-areaPost {
   display: flex;
-  /* position: relative; */
   background-color: #fff;
   overflow: hidden;
-  margin-top: 1.2vh;
-  width: 80%;
-  padding: 1%;
+  margin-top: 1.5vh;
+  border-radius: 3px;
+  width: 85%;
+  /* padding: 2%; */
   }
 
 .mobile-list {
@@ -424,6 +481,10 @@ circle {
 
 .content-post {
   display: flex;
+}
+
+div#text-post {
+  font-size: 0.9em;
 }
 
 input[type='file'] {
@@ -478,8 +539,8 @@ input[type='file'] {
 .imageCirclePostUser {
   cursor: pointer;
   border-radius: 50%;
-  margin-right: 10%;
-  margin-left: 5%;
+  margin-right: 4%;
+  margin-left: 3%;
   max-width: 40px;
   max-height: 40px;
 }
