@@ -16,25 +16,25 @@ export const Feed = () => {
         <img src="../../img/logo.png" class="logo-sideNav">
       </li>
       <li class="item-side-navbar username-sidebar">Olá, </br>${displayName}!</li>
-      <li class="item-side-navbar">
+      <li class="item-side-navbar" id="sidebarHome">
         <span class="iconify" data-icon="fluent:news-20-regular" style="color: #706f6b;"></span>
         <p class="text-sideBar">Feed</p>
       </li>
-      <li class="item-side-navbar">
+      <!-- <li class="item-side-navbar" id="sidebarComunity">
         <span class="iconify" data-icon="ph:users-three-light" style="color: #706f6b;"></span>
         <p class="text-sideBar">Amigas</p>
       </li>
-      <li class="item-side-navbar">
+      <li class="item-side-navbar" id="sidebarGroups">
         <span class="iconify" data-icon="akar-icons:thunder" style="color: #706f6b;"></span>
         <p class="text-sideBar">Grupos</p>
-      </li>
-      <li class="item-side-navbar">
+      </li> -->
+      <li class="item-side-navbar" id="sidebarProfile">
         <span class="iconify" data-icon="bi:person-circle" style="color: #706f6b;"></span>
         <p class="text-sideBar">Perfil</p>
       </li>
       <li class="item-side-navbar">
-        <p class="text-logout-sidebar">Sair</p>
         <span class="iconify" data-icon="ic:round-logout" style="color: #706f6b;"></span>
+        <p class="text-logout-sidebar">Sair</p>
       </li>
     </ul>
 
