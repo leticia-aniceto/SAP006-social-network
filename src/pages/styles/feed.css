@@ -610,3 +610,28 @@ input[type='file'] {
     opacity: 1;
   }
 }
+
+.post-desktop {
+  background-color: #ffebe3;
+  padding: 2%;
+}
+
+.published-form-desktop {
+  margin-top: 0;
+}
+
+input#text-post-desktop {
+  height: 15vh;
+  width: 84%;
+  border-radius: 8px;
+  padding: 2%;
+  font-size: medium;
+  margin-bottom: 1%;
+}
+
+.btn-send-desktop {
+  margin-left: 70%;
+  font-size: 1.2em;
+  height: 5vh;
+  width: 15vw;
+}

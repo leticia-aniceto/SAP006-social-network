@@ -41,7 +41,7 @@
   }
 
   .post {
-    display: flex;
+    display:
   }
 
   .btn-logout,
@@ -654,7 +654,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .side-navbar {
+  .side-navbar, .post-desktop {
     display: none;
   }
 
@@ -718,10 +718,14 @@
     width: 90%;
     display: flex;
   }
+
+  .container-areaPost {
+    margin-left: 7%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
-  .side-navbar {
+  .side-navbar, .post-desktop {
     display: none;
   }
 
@@ -812,5 +816,9 @@
   .skipbutton {
     margin-right: 15%;
     justify-content: flex-end;
+  }
+
+  .container-areaPost {
+    margin-left: 7%;
   }
 }
