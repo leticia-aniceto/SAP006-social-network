@@ -2,7 +2,6 @@ import { updatePosts, likePost, unlikePost } from '../services/database.js';
 import { deleteConfirm } from './popup.js';
 
 export const printPost = (post) => {
-  console.log(post.photoPost);
   const likeArray = post.likes;
 
   const postTemplate = document.createElement('section');
@@ -17,7 +16,7 @@ export const printPost = (post) => {
       <img id='photoPost-${post.id}' class='imageCirclePostUser' src='${post.photoPost}' height="40px" width="40px">
       <div class="header-post-like">
         <div class="header-post">
-          <p class='username' id='user-name' data-name="${post.id}">${post.displayName}</p>
+          <p class='username' id='user-name' data-name="${post.id}">${post.displayName ? post.displayName : 'Usuária'}</p>
           
           <menu class="dropdown" style="float:right; display:${isMyPost ? 'inline-end' : 'none'}">
             <button id="btn-drop"  class="dropbtn">
@@ -48,7 +47,7 @@ export const printPost = (post) => {
               id="${post.id}">${post.text}
             </div>
           </div>
-          
+
           <section class="actions" data-section style="display:${isMyPost ? 'none' : 'inline-end'}">
             <p data-numLike='${post.id}' class='numLikes'>${post.likes.length}</p>
             <button class="btn-like"><i id="${post.id}" data-like='${post.id}' class='far fa-heart'></i></button>
