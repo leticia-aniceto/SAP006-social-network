@@ -13,7 +13,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -25,6 +25,7 @@
 .text-logout-sidebar {
   font-size: 1.2em;
   margin-right: 2vh;
+  margin-left: 2vh;
 }
 
 .item-side-navbar {
@@ -35,6 +36,7 @@
   padding: 8px 16px;
   text-decoration: none;
   font-size: 1.2em;
+  margin-bottom: 15px;
 }
 
 .item-side-navbar.active {
@@ -42,16 +44,21 @@
   color: #706f6b;
 } 
 
+.item-side-navbar:last-child{
+  margin-top: 95%;
+  font-size: small;
+}
+
 .username-sidebar {
   font-weight: 700;
   font-size: 1.5em;
+  margin-bottom: 30%;
 }
 
 
 header {
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
   display: flex;
   flex-wrap: nowrap;
   align-content: center;
@@ -260,7 +267,6 @@ button#btn-drop {
 }
 
 .dropdown {
-  position: relative;
   display: inline-end;
   float: right;
 }
@@ -316,7 +322,7 @@ textarea {
   height: max-content;
   background: var(--color-white);
   border-radius: 5px;
-  margin: 3% 0;
+  margin: 3%;
   padding: 2%;
   display: flex;
   justify-content: flex-start;
