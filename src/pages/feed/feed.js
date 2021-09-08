@@ -2,38 +2,73 @@ import {
   addPosts, loadPosts, searchPosts,
 } from '../../services/database.js';
 import { printPost } from '../../components/feedcomponent.js';
-import { logout, uploadPicture, downloadPicture, updateProfile } from '../../services/authentication.js';
+import {
+  logout, uploadPicture, downloadPicture, updateProfile
+} from '../../services/authentication.js';
 
 export const Feed = () => {
   const rootElement = document.createElement('div');
+  const displayName = firebase.auth().currentUser.displayName;
+
   const container = `
-    <header class="searchBell">
-      <input type="search" id="input-search" class="searchBar btn-search-icon" name="searchPost" placeholder="Pesquise no Fort">
-      <button id="search" class="search">
-        <span class="iconify" data-icon="akar-icons:search"></span>
-      </button>
-    </header>
-    <hr class="line">
-    <section class="post">
-      <div class="post-before">
-        <p class="header-post-before">POST</p>
-      </div>
+    <ul class="side-navbar">
+      <li class="item-side-navbar">
+        <img src="../../img/logo.png" class="logo-sideNav">
+      </li>
+      <li class="item-side-navbar username-sidebar">Olá, </br>${displayName}!</li>
+      <li class="item-side-navbar">
+        <span class="iconify" data-icon="fluent:news-20-regular" style="color: #706f6b;"></span>
+        <p class="text-sideBar">Feed</p>
+      </li>
+      <li class="item-side-navbar">
+        <span class="iconify" data-icon="ph:users-three-light" style="color: #706f6b;"></span>
+        <p class="text-sideBar">Amigas</p>
+      </li>
+      <li class="item-side-navbar">
+        <span class="iconify" data-icon="akar-icons:thunder" style="color: #706f6b;"></span>
+        <p class="text-sideBar">Grupos</p>
+      </li>
+      <li class="item-side-navbar">
+        <span class="iconify" data-icon="bi:person-circle" style="color: #706f6b;"></span>
+        <p class="text-sideBar">Perfil</p>
+      </li>
+      <li class="item-side-navbar">
+        <p class="text-logout-sidebar">Sair</p>
+        <span class="iconify" data-icon="ic:round-logout" style="color: #706f6b;"></span>
+      </li>
+    </ul>
 
-      <form action="" id="published-form" class="published-form">
-        <input type="text" id="text-post" name="new-post" class="form-input-newpost" placeholder="Mana, o que você quer compatilhar?">
-        <p class="warn-input-add" hidden>Por favor, digite algo para compartilhar.</p>
-        <button class="btn-send" id="send-post">Enviar</button>
-      </form>
-    </section>
+    <div class="anotherSide-content"> 
+      <header class="searchBell">
+        <img src="../../img/logo.png" class="logo-searchBar">
+        <input type="search" id="input-search" class="searchBar btn-search-icon" name="searchPost" placeholder="Pesquise no Fort">
+        <button id="search" class="search">
+          <span class="iconify" data-icon="akar-icons:search"></span>
+        </button>
+      </header>
+      
+      <hr class="line">
+      <section class="post">
+        <div class="post-before">
+          <p class="header-post-before">POST</p>
+        </div>
 
-    <h4 class="recent">POSTAGENS RECENTES</h4>
-   
-    <div class="search-result"></div>
+        <form action="" id="published-form" class="published-form">
+          <input type="text" id="text-post" name="new-post" class="form-input-newpost" placeholder="Mana, o que você quer compatilhar?">
+          <p class="warn-input-add" hidden>Por favor, digite algo para compartilhar.</p>
+          <button class="btn-send" id="send-post">Enviar</button>
+        </form>
+      </section>
+
+      <h4 class="recent">POSTAGENS RECENTES</h4>
     
-    <section class="get-post background-color-main" data-postcontainer id="postTemplate"> 
-      <!--Aqui vem todo o template do areaOfPost-->
-    </section>
-
+      <div class="search-result"></div>
+      
+      <section class="get-post background-color-main" data-postcontainer id="postTemplate"> 
+        <!--Aqui vem todo o template do areaOfPost-->
+      </section>
+    </div>
+    
     <nav class="navbar mobile-list">
       <ul>
         <li id="homeBtn">
@@ -83,7 +118,6 @@ export const Feed = () => {
 
   const currentUser = firebase.auth().currentUser;
   const useruid = firebase.auth().currentUser.uid;
-  const displayName = firebase.auth().currentUser.displayName;
   const photo = firebase.auth().currentUser.photoURL;
 
   const containerSearch = rootElement.querySelector('.search-result');
@@ -182,7 +216,7 @@ export const Feed = () => {
   const profileBtn = rootElement.querySelector('#profilebtn');
   const profileSection = rootElement.querySelector('#profile-section');
   const inputImg = rootElement.querySelector('.profile-img');
-  const input = rootElement.querySelector('label[for="input-file"]').nextElementSibling
+  const input = rootElement.querySelector('label[for="input-file"]').nextElementSibling;
 
   function showPhoto() {
     if (photo) {

@@ -2,8 +2,54 @@
   background-color: var(--color-background);
 }
 
+.side-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0% 2%;
+  width: 25%;
+  background-color: #FFD2BF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.text-sideBar {
+  margin-left: 2vh;
+  font-size: 1.2em;
+}
+
+.text-logout-sidebar {
+  font-size: 1.2em;
+  margin-right: 2vh;
+}
+
+.item-side-navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #706f6b;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.item-side-navbar.active {
+  background-color: #FFEBE3;
+  color: #706f6b;
+} 
+
+.username-sidebar {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+
 header {
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   margin-top: 10px;
   display: flex;
@@ -14,7 +60,6 @@ header {
 
 .searchBar {
   width: 70%;
-  max-width: 250px;
   height: 10vw;
   max-height: 40px;
   padding: 0.5em;
@@ -34,15 +79,17 @@ header {
   background-color: var(--color-background);
 }
 
-.btn-search-icon {
-}
-
 .search {
   background-color: var(--color-background);
 }
 
 input.searchBar {
   box-shadow: none;
+}
+
+.logo-searchBar {
+  width: 10vh;
+  height: 10vh;
 }
 
 .btn-logout {

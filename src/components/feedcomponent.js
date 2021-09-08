@@ -13,7 +13,7 @@ export const printPost = (post) => {
 
   const areaOfPost = `
     <section class="mainBox">
-      <img id='photoPost-${post.id}' class='imageCirclePostUser' src='${post.photoPost}' height="40px" width="40px">
+      <img id='photoPost-${post.id}' class='imageCirclePostUser' src='${post.photoUser}' height="40px" width="40px">
       <div class="header-post-like">
         <div class="header-post">
           <p class='username' id='user-name' data-name="${post.id}">${post.displayName ? post.displayName : 'Usuária'}</p>
