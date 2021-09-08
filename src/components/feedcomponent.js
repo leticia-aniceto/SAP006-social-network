@@ -13,45 +13,49 @@ export const printPost = (post) => {
   const isMyPost = firebase.auth().currentUser.uid === post.user_id;
 
   const areaOfPost = `
-    <div class="box">
-      <div class="header-post">
-      <img id='photoPost-${post.id}' class='imageCirclePostUser' src='${post.photoPost}' height="40px" width="40px"/>
-        <p class='username' id='user-name' data-name="${post.id}">${post.displayName}</p>
-        <menu class="dropdown" style="float:right; display:${isMyPost ? 'inline-end' : 'none'}">
-          <button id="btn-drop"  class="dropbtn">
-            <span class="iconify" data-icon="ph:dots-three-duotone"></span>
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <button data-edit="${post.id}" class="edit-button dropbtn">
-              <span class="iconify btn-more" data-icon="bytesize:edit"></span>
-              Editar
+    <section class="mainBox">
+      <img id='photoPost-${post.id}' class='imageCirclePostUser' src='${post.photoPost}' height="40px" width="40px">
+      <div class="header-post-like">
+        <div class="header-post">
+          <p class='username' id='user-name' data-name="${post.id}">${post.displayName}</p>
+          
+          <menu class="dropdown" style="float:right; display:${isMyPost ? 'inline-end' : 'none'}">
+            <button id="btn-drop"  class="dropbtn">
+              <span class="iconify" data-icon="ph:dots-three-duotone"></span>
             </button>
-            <button data-delete="${post.id}" class="delete-button dropbtn">
-              <span class="iconify btn-more" data-inline="false" data-icon="bytesize:trash"></span> 
-              Deletar
-            </button>
-            <button data-save="${post.id}" class="save-button dropbtn">
-              <span class="iconify btn-more" data-icon="carbon:save"></span>
-              Salvar
-            </button>
-          </div>
-        </menu>
-      </div>
-      
-      <div class="align-post-like">
-        <div class="content-post">
+            <div id="myDropdown" class="dropdown-content">
+              <button data-edit="${post.id}" class="edit-button dropbtn">
+                <span class="iconify btn-more" data-icon="bytesize:edit"></span>
+                Editar
+              </button>
+              <button data-delete="${post.id}" class="delete-button dropbtn">
+                <span class="iconify btn-more" data-inline="false" data-icon="bytesize:trash"></span> 
+                Deletar
+              </button>
+              <button data-save="${post.id}" class="save-button dropbtn">
+                <span class="iconify btn-more" data-icon="carbon:save"></span>
+                Salvar
+              </button>
+            </div>
+          </menu>
+        </div>
+    
+        <div class="align-post-like">
+          <div class="content-post">
             <div id="text-post"
               data-textpost="${post.id}"
               class="post-content text-post"
               id="${post.id}">${post.text}
             </div>
+          </div>
+          
+          <section class="actions" data-section style="display:${isMyPost ? 'none' : 'inline-end'}">
+            <p data-numLike='${post.id}' class='numLikes'>${post.likes.length}</p>
+            <button class="btn-like"><i id="${post.id}" data-like='${post.id}' class='far fa-heart'></i></button>
+          </section>
         </div>
-        <section class="actions" data-section style="display:${isMyPost ? 'none' : 'inline-end'}">
-          <p data-numLike='${post.id}' class='numLikes'>${post.likes.length}</p>
-          <button class="btn-like"><i id="${post.id}" data-like='${post.id}' class='far fa-heart'></i></button>
-        </section>
       </div>
-    </div>
+    </section>
   `;
 
   postTemplate.innerHTML = areaOfPost;
