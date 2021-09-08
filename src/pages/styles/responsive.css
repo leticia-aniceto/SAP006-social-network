@@ -12,6 +12,9 @@
     background-color: #ffebe3;
   }
 
+  .section#postTemplate {
+    margin-left: 7%;
+  }
   .iconify [data-icon="fluent:news-20-regular"],
   [data-icon="ph:users-three-light"],
   [data-icon="akar-icons:thunder"],
@@ -278,6 +281,10 @@
     background-color: #ffebe3;
   }
 
+  .section#postTemplate {
+    margin-left: 7%;
+  }
+  
   .background-color-main,
   .searchBell,
   .recent,
