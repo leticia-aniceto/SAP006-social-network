@@ -15,7 +15,7 @@ export const Feed = () => {
       <li class="item-side-navbar">
         <img src="../../img/logo.png" class="logo-sideNav">
       </li>
-      <li class="item-side-navbar username-sidebar">Olá, </br>${displayName}!</li>
+      <li class="item-side-navbar username-sidebar">${displayName}</li>
       <li class="item-side-navbar" id="sidebarHome">
         <span class="iconify" data-icon="fluent:news-20-regular" style="color: #706f6b;"></span>
         <p class="text-sideBar">Feed</p>
@@ -48,6 +48,16 @@ export const Feed = () => {
       </header>
       
       <hr class="line">
+      <h4 class="recent">Olá, ${displayName}!</h4>
+
+      <section class="post-desktop">
+        <form action="" id="published-form-desktop" class="published-form-desktop">
+          <input type="text" id="text-post-desktop" name="new-post" class="form-input-newpost-desktop" placeholder="Mana, o que você quer compatilhar?">
+          <p class="warn-input-add" hidden>Por favor, digite algo para compartilhar.</p>
+          <button class="btn-send-desktop btn-send" id="send-post">Enviar</button>
+        </form>
+      </section>
+
       <section class="post">
         <div class="post-before">
           <p class="header-post-before">POST</p>
@@ -59,8 +69,6 @@ export const Feed = () => {
           <button class="btn-send" id="send-post">Enviar</button>
         </form>
       </section>
-
-      <h4 class="recent">POSTAGENS RECENTES</h4>
     
       <div class="search-result"></div>
       
@@ -272,25 +280,6 @@ export const Feed = () => {
       navbarBottom.classList.add('sticky');
     }
   }
-
-  loadPosts()
-    .then((snap) => {
-      snap.forEach((doc) => {
-        const post = {
-          id: doc.id,
-          text: doc.data().text,
-          user_id: doc.data().user_id,
-          likes: doc.data().likes,
-          date: doc.data().date,
-          comments: doc.data().comments,
-          displayName: doc.data().displayName,
-          photoPost: doc.data().photoURL,
-        };
-
-        const print = printPost(post);
-        postTemplate.appendChild(print);
-      });
-    });
 
   window.onscroll = stickyFilter();
 

@@ -40,6 +40,10 @@
     width: 5vh;
   }
 
+  .post {
+    display:
+  }
+
   .btn-logout,
   .iconify[data-icon="ic:round-logout"] {
     background-color: #ffd2bf;
@@ -47,7 +51,7 @@
 
   .anotherSide-content {
     width: 75%;
-    margin-left: 36vh;
+    margin-left: 50vh;
   }
 
   header.esmaeceHeader,
@@ -55,6 +59,10 @@
   .esmaeceHeader-signup,
   .logotipo-text-signup {
     display: none;
+  }
+
+  .recent {
+    font-size: 1.4em;
   }
 
   .mainSection-background-opacity,
@@ -241,6 +249,8 @@
   .imageCirclePostUser {
     height: 8vh;
     width: 8vh;
+    max-height: none;
+    max-width: none;
   }
 
   p.username {
@@ -644,7 +654,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .side-navbar {
+  .side-navbar, .post-desktop {
     display: none;
   }
 
@@ -702,10 +712,20 @@
     margin-right: 15%;
     justify-content: flex-end;
   }
+
+  /* FEED */
+  section#postTemplate {
+    width: 90%;
+    display: flex;
+  }
+
+  .container-areaPost {
+    margin-left: 7%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
-  .side-navbar {
+  .side-navbar, .post-desktop {
     display: none;
   }
 
@@ -789,8 +809,16 @@
     font-size: 1.4rem;
   }
 
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+
   .skipbutton {
     margin-right: 15%;
     justify-content: flex-end;
+  }
+
+  .container-areaPost {
+    margin-left: 7%;
   }
 }

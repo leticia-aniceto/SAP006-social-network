@@ -13,7 +13,7 @@ export const Welcome = () => {
           Bem-vinda, mulher!
         </header>
         <main class="welcome-paragraph">
-          <p>Fort é uma rede social exclusiva para mulheres!</p> 
+          <p class="welcome-text">Fort é uma rede social exclusiva para mulheres!</p> 
         
           <button class="btn-continue" id="btn-continue">Continuar</button>
 

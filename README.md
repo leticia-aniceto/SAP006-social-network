@@ -1,6 +1,11 @@
-<img src="./src/img/logo.png">
+<p align="center">
+      <img src="./src/img/logo-white.jpeg" style="border-radius:5px; width:100px">
+</p>
 
 # Fort - Uma rede social tão segura quanto um forte!
+![GitHub repo size](https://img.shields.io/github/repo-size/leticia-aniceto/SAP006-social-network?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/leticia-aniceto/SAP006-social-network?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/leticia-aniceto/SAP006-social-network?style=for-the-badge)
 
 ## Índice
 
@@ -22,9 +27,6 @@
     - [Git e Github](#git-e-github)
     - [Boas práticas de programação](#boas-práticas-de-programação)
   - [6. Desenvolvedoras 👩‍💻](#6-desenvolvedoras-)
-    - [**Bruna Calixto**](#bruna-calixto)
-    - [**Camila Conte**](#camila-conte)
-    - [**Letícia Aniceto**](#letícia-aniceto)
   
 ---
 
@@ -43,6 +45,7 @@ Eu sozinha ando bem, mas com você ando melhor.
 
 Este projeto foi realizado para o _bootcamp_ da [LABORATÓRIA](https://www.laboratoria.la/br).
 
+----
 
 ## 2. Histórias de usuário 📃
 Para nos guiarmos durante o desenvolvimento da aplicação e suas funcionalidades,
@@ -89,6 +92,8 @@ Ao clicar em "voltar", visualizar a home.
 - Botão de voltar
 
 
+----
+</br>
 
 ## 3. A aplicação 📱 🧵
 
@@ -139,7 +144,9 @@ _Versão desktop_
 - Fazer testes manuais buscando erros e imperfeições simples.
 - Fazer testes de usabilidade e incorporar o feedback dos usuários como melhorias.
 - Fazer deploy do aplicativo e marcar a versão (git tag).
-  
+
+---
+</br>
 
 ## 5. Conteúdos e ferramentas utilizados 📚
 
@@ -196,11 +203,62 @@ _Versão desktop_
 - [ ] Linting
 
 ---
-
+</br>
 
 ## 6. Desenvolvedoras 👩‍💻
 
-### **Bruna Calixto**
+<table>
+  <tr>
+      <td align="center">
+            <a href="#">
+            <img src="https://avatars.githubusercontent.com/u/62296172?v=4" width="100px" alt="Foto de Bruna Calixto no GitHub"/><br>
+            <sub>
+            <b>Bruna Calixto</b><br>
+            </sub>
+            </a>
+      </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/83038134?v=4" width="100px;" alt="Foto de Camila Conte no GitHub"/><br>
+        <sub>
+          <b>Camila Conte</b><br>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/70327566?v=4" width="100px;" alt="Foto de Letícia Aniceto no GitHub"/><br>
+        <sub>
+          <b>Letícia Aniceto</b><br>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<table width="400">
+      <td>
+            <a href="https://github.com/bruna-devbio/"><img src="./src/img/github.png" alt="ícone github" width="20px" height="20px">
+            <a href="https://www.linkedin.com/in/brunacalixtodevjunior/"><img src="./src/img/linkedin.png" alt="ícone linkedin" width="20px" height="20px">
+      </td>
+      <td>
+            <a href="https://github.com/caxconte/"><img src="./src/img/github.png" alt="ícone github" width="20px" height="20px">
+            <a href="https://www.linkedin.com/in/brunacalixtodevjunior/"><img src="./src/img/linkedin.png" alt="ícone linkedin" width="20px" height="20px">
+      </td>
+      <td>
+            <a href="https://github.com/leticia-aniceto/"><img src="./src/img/github.png" alt="ícone github" width="20px" height="20px">
+            <a href="https://www.linkedin.com/in/leticia-braga-aniceto/"><img src="./src/img/linkedin.png" alt="ícone linkedin" width="20px" height="20px">
+      </td>
+
+</table>
+
+
+
+<p align="right">
+      <a href="#fort---uma-rede-social-tão-segura-quanto-um-forte">Voltar ao topo ⬆</a>
+</p>
+
+<!-- ### **Bruna Calixto**
 [GitHub] (https://github.com/bruna-devbio/)
 [LinkedIn] (https://www.linkedin.com/in/brunacalixtodevjunior/)
 
@@ -210,4 +268,4 @@ _Versão desktop_
 
 ### **Letícia Aniceto**
 [GitHub] (https://github.com/leticia-aniceto/)
-[LinkedIn] (https://www.linkedin.com/in/leticia-braga-aniceto/)
+[LinkedIn] (https://www.linkedin.com/in/leticia-braga-aniceto/) -->
