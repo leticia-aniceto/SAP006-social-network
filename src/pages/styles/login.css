@@ -30,7 +30,11 @@
     background-attachment: fixed;
     background-repeat: repeat-x no-repeat;
     z-index: -1;
-    padding: 10% 5% 5% 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .without-opacity {

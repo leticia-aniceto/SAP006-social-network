@@ -12,6 +12,9 @@
     background-color: #ffebe3;
   }
 
+  .section#postTemplate {
+    margin-left: 7%;
+  }
   .iconify [data-icon="fluent:news-20-regular"],
   [data-icon="ph:users-three-light"],
   [data-icon="akar-icons:thunder"],
@@ -40,10 +43,6 @@
     width: 5vh;
   }
 
-  .post {
-    display:
-  }
-
   .btn-logout,
   .iconify[data-icon="ic:round-logout"] {
     background-color: #ffd2bf;
@@ -57,7 +56,8 @@
   header.esmaeceHeader,
   .logotipo-text,
   .esmaeceHeader-signup,
-  .logotipo-text-signup {
+  .logotipo-text-signup, 
+  .header-container {
     display: none;
   }
 
@@ -146,6 +146,7 @@
     width: 14vw;
     font-size: 1vw;
     margin-bottom: 1.5vw;
+    padding: 0.4rem;
   }
 
   .reset-password {
@@ -190,6 +191,10 @@
   }
 
   /*LANDING PAGES*/
+  .background-color-main-signup {
+    overflow: hidden;
+  }
+
   .btn-continue-welcome {
     font-size: 1rem;
   }
@@ -217,14 +222,15 @@
   .welcome-bar,
   .logotipo {
     width: 50vw;
+    padding: 0;
+  }
+
+  .welcome-bar {
+    margin-top: 26%;
   }
 
   .welcome-content header {
     padding-top: 10%;
-  }
-
-  .welcome-bar {
-    margin-top: 20%;
   }
 
   .btn-continue-welcome {
@@ -271,6 +277,24 @@
   .fa {
     font-size: 1.3rem;
   }
+
+  .profileSection {
+    margin-right: 0;
+    width: 75%;
+    animation-name: animatemodaldesktop;
+    animation-duration: 0.4s;
+  }
+
+  @keyframes animatemodaldesktop {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      top: 100%;
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -278,6 +302,10 @@
     background-color: #ffebe3;
   }
 
+  .section#postTemplate {
+    margin-left: 7%;
+  }
+  
   .background-color-main,
   .searchBell,
   .recent,
@@ -304,7 +332,8 @@
   header.esmaeceHeader,
   .logotipo-text,
   .esmaeceHeader-signup,
-  .logotipo-text-signup {
+  .logotipo-text-signup,
+  .header-container {
     display: none;
   }
 
@@ -455,6 +484,9 @@
   .content-welcome {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .welcome-bar,
@@ -484,6 +516,22 @@
 
   .mobile-list {
     display: none;
+  }
+
+  .profileSection {
+    animation-name: animatemodaldesktop;
+    animation-duration: 0.4s;
+  }
+
+  @keyframes animatemodaldesktop {
+    from {
+      left: 0;
+      opacity: 0;
+    }
+    to {
+      left: 80%;
+      opacity: 1;
+    }
   }
 }
 
@@ -595,6 +643,10 @@
   }
 
   /*LANDING PAGES*/
+  .logotipo-mobile {
+    display: none;
+  }
+
   .welcome-content header {
     padding-top: 10%;
   }
@@ -698,6 +750,9 @@
   }
 
   /*LANDING PAGES*/
+  .logotipo-mobile {
+    display: none;
+  }
 
   .sidebar-content header {
     padding-top: 40%;
@@ -803,6 +858,9 @@
   }
 
   /*LANDING PAGES*/
+  .logotipo-mobile {
+    display: none;
+  }
 
   .sidebar-content header {
     margin-top: 20%;

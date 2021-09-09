@@ -3,6 +3,7 @@ export const updateProfile = (userName) => {
     .currentUser.updateProfile({
       displayName: userName,
       return: updateProfile,
+      // rever o return
     });
 };
 
