@@ -261,11 +261,11 @@ _Versão desktop_
 <!-- ### **Bruna Calixto**
 [GitHub] (https://github.com/bruna-devbio/)
 [LinkedIn] (https://www.linkedin.com/in/brunacalixtodevjunior/)
-
+<br>
 ### **Camila Conte**
 [GitHub] (https://github.com/caxconte/)
 [LinkedIn] (https://www.linkedin.com/in/camila-conte/)
-
+<br>
 ### **Letícia Aniceto**
 [GitHub] (https://github.com/leticia-aniceto/)
 [LinkedIn] (https://www.linkedin.com/in/leticia-braga-aniceto/) -->
