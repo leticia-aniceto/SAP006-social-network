@@ -3,9 +3,7 @@ import { navigation } from '../../navigation.js';
 export const Comunique = () => {
   const template = `
   <section class="content-comunique">
-    <section class="logotipo logotipo-mobile">
-      <img src="./img/logo.png" alt="Logotipo do Fort" class="logoimg">
-    </section>
+
     <section class="sidebar"> 
       <div class="sidebar-content">
         <header>
@@ -18,6 +16,11 @@ export const Comunique = () => {
         </section>
       </div>
     </section>
+
+    <section class="logotipo logotipo-mobile">
+      <img src="./img/logo.png" alt="Logotipo do Fort" class="logoimg">
+    </section>
+
   </section>
 `;
 
