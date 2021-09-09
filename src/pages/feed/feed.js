@@ -16,7 +16,7 @@ export const Feed = () => {
         <img src="../../img/logo.png" class="logo-sideNav">
       </li>
       <li class="item-side-navbar username-sidebar">${displayName}</li>
-      <li class="item-side-navbar" id="sidebarHome">
+      <li class="item-side-navbar " id="sidebarHome">
         <span class="iconify" data-icon="fluent:news-20-regular" style="color: #706f6b;"></span>
         <p class="text-sideBar">Feed</p>
       </li>
@@ -79,7 +79,7 @@ export const Feed = () => {
     
     <nav class="navbar mobile-list">
       <ul>
-        <li id="homeBtn">
+        <li id="homeBtn" class="homeBtn">
           <span class="iconify" data-inline="false" data-icon="akar-icons:home" style="color: #FFD2BF;">
           </span>
         </li>
@@ -123,6 +123,8 @@ export const Feed = () => {
 
   const postTemplate = rootElement.querySelector('#postTemplate');
   const postSection = rootElement.querySelector('.post');
+  const profileSection = rootElement.querySelector('#profile-section');
+  const profileDesktop = rootElement.querySelector('#animation-profile-desktop');
 
   const currentUser = firebase.auth().currentUser;
   const useruid = firebase.auth().currentUser.uid;
@@ -213,8 +215,13 @@ export const Feed = () => {
     postSection.style.display = 'none';
   });
 
-  const newPostButton = rootElement.querySelector('#newPostButton');
+  const homeBtnSidebar = rootElement.querySelector('#sidebarHome');
+  homeBtnSidebar.addEventListener('click', () => {
+    postSection.style.display = 'none';
+    profileSection.style.display = 'none';
+  });
 
+  const newPostButton = rootElement.querySelector('#newPostButton');
   newPostButton.addEventListener('click', () => {
     postTemplate.style.display = 'none';
     postSection.style.display = 'block';
@@ -222,7 +229,7 @@ export const Feed = () => {
   });
 
   const profileBtn = rootElement.querySelector('#profilebtn');
-  const profileSection = rootElement.querySelector('#profile-section');
+  const profileBtnDesktop = rootElement.querySelector('#sidebarProfile');
   const inputImg = rootElement.querySelector('.profile-img');
   const input = rootElement.querySelector('label[for="input-file"]').nextElementSibling;
 
@@ -243,6 +250,11 @@ export const Feed = () => {
   });
 
   profileBtn.addEventListener('click', () => {
+    postTemplate.style.display = 'none';
+    profileSection.style.display = 'block';
+  });
+
+  profileBtnDesktop.addEventListener('click', () => {
     postTemplate.style.display = 'none';
     profileSection.style.display = 'block';
   });
