@@ -124,7 +124,6 @@ export const Feed = () => {
   const postTemplate = rootElement.querySelector('#postTemplate');
   const postSection = rootElement.querySelector('.post');
   const profileSection = rootElement.querySelector('#profile-section');
-  const profileDesktop = rootElement.querySelector('#animation-profile-desktop');
 
   const currentUser = firebase.auth().currentUser;
   const useruid = firebase.auth().currentUser.uid;
