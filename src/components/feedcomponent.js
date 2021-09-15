@@ -47,7 +47,6 @@ export const printPost = (post) => {
               id="${post.id}">${post.text}
             </div>
           </div>
-
           <section class="actions" data-section style="display:${isMyPost ? 'none' : 'inline-end'}">
             <p data-numLike='${post.id}' class='numLikes'>${post.likes.length}</p>
             <button class="btn-like"><i id="${post.id}" data-like='${post.id}' class='far fa-heart'></i></button>

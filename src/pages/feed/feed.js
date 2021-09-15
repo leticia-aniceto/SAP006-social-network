@@ -3,7 +3,7 @@ import {
 } from '../../services/database.js';
 import { printPost } from '../../components/feedcomponent.js';
 import {
-  logout, uploadPicture, downloadPicture, updateProfile
+  logout, uploadPicture, downloadPicture, updateProfile,
 } from '../../services/authentication.js';
 
 export const Feed = () => {
@@ -37,7 +37,6 @@ export const Feed = () => {
         <p class="text-logout-sidebar">Sair</p>
       </li>
     </ul>
-
     <div class="anotherSide-content"> 
       <header class="searchBell">
         <img src="../../img/logo.png" class="logo-searchBar">
@@ -93,11 +92,9 @@ export const Feed = () => {
         </li>
       </ul>
     </nav>
-
     <section class="profile-section" id="profile-section">
       <div class="profile-img-container">
         <img src="../../img/logo.png" class="profile-img">
-
         <div class='input-wrapper'>
           <label for='input-file'>
             Seleciona aquela foto mara!
@@ -112,8 +109,6 @@ export const Feed = () => {
         <button class="btn-logout">
           <span class="iconify logout-icon-bcgcolor" data-icon="ic:round-logout" style="color: #f78563; background-color: white;"></span>
         </button>
-
-
         <button class="profile-save">Salvar</buton>
       </div>
     </section>
@@ -241,7 +236,6 @@ export const Feed = () => {
 
   input.addEventListener('change', (e) => {
     const { target } = e;
-    console.log(target);
     const file = target.files[0];
     uploadPicture(useruid, file);
     downloadPicture(useruid, currentUser);
@@ -261,7 +255,6 @@ export const Feed = () => {
   const usernameInput = rootElement.querySelector('#profile-username');
   const saveUsernameBtn = rootElement.querySelector('.profile-save');
   saveUsernameBtn.addEventListener('click', () => {
-    console.log(usernameInput.value);
     updateProfile(usernameInput.value);
   });
 

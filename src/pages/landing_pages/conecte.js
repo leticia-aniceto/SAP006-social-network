@@ -13,15 +13,12 @@ export const Conecte = () => {
         </header>
         <section class="sidebar-paragraph">
           <p>Acompanhe mulheres incríveis e tudo o que elas têm a dizer!</p> 
-
           <button class="btn-continue" id="btn-continue">Continuar</button>
-
           <button class="skipbutton">Pular</button>
         </section>
       </div>
     </section>
   <section>
-
   `;
 
   const rootElement = document.createElement('div');
