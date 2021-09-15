@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
-/** WELCOME PAGE **/
+/* WELCOME PAGE */
 .logotipo {
   display: flex;
   justify-content: space-evenly;
@@ -71,7 +71,7 @@
   flex-direction: column;
 }
 
-/** OTHER PAGES **/
+/* OTHER PAGES */
 .sidebar {
   height: 100vh;
   display: flex;
@@ -124,15 +124,13 @@
 }
 
 
-/** CONFIG GERAL **/
+/* CONFIG GERAL */
 .skipbutton {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
   width: 100%;
   padding: 0;
-  margin-left: 70%;
   margin-top: 25px;
   padding-bottom: 10%;
   
@@ -170,76 +168,4 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   text-transform: uppercase;
   padding-bottom: 10%;
-}
-
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .logotipo {
-    padding: 10%;
-  }
-  .logoimg {
-    width: 30%;
-  }
-  .welcome-content header, .content header {
-    font-size: 2rem;
-  }
-  .welcome-paragraph {
-    margin-top: 10%;
-    font-size: 1.5rem;
-  }
-  .btn-continue {
-    width: 200px;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-  }
-  .skip {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-  }
-  .sidebar {
-    padding: 0;
-  }
-  .sidebar-paragraph {
-    font-size: 1.5rem;
-  }
-  .skipbutton {
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1200px) {
-  .logotipo {
-    
-  }
-  .welcome-bar {
-    
-  }
-  /* .logoimg {
-    width: 30%;
-  } */
-  /* .welcome-content header, .content header {
-    font-size: 2rem;
-  }
-  .welcome-paragraph {
-    margin-top: 10%;
-    font-size: 1.5rem;
-  }
-  .btn-continue {
-    width: 200px;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-  }
-  .skip {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-  }
-  .sidebar {
-    padding: 0;
-  }
-  .sidebar-paragraph {
-    font-size: 1.5rem;
-  }
-  .skipbutton {
-    justify-content: flex-end;
-  } */
 }

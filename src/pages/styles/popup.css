@@ -11,7 +11,7 @@
 }
 
 .modal {
-  background-color: #fff;
+  background-color: #f1f1f1;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,6 +29,7 @@
 }
 
 .modalMensage {
+  font-family: Poppins;
   color: black;
   font-size: 22px;
   font-weight: 300;
@@ -37,20 +38,21 @@
 }
 
 .yes, .no {
+  font-family: Poppins;
   border: none;
   padding: 7px 14px;
   font-size: 1rem;
   border-radius: 5px;
-  color: #fff;
 }
 
 .yes {
-  background-color: #1f1f4b
-  ;
+  background-color: #213d3e;
+  color: #fff;
 }
 
 .no {
-  background-color: #FF7171;
+  background-color: #FFD2BF;
+  color: rgb(48, 48, 48);
 }
 
 #close-btn {
@@ -75,6 +77,3 @@
     opacity: 1;
   }
 }
-
-
-
