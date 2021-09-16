@@ -744,9 +744,12 @@
   }
 
   /*LANDING PAGES*/
-  .logotipo-mobile,
-  .logoimg {
+  .logotipo-mobile {
     display: none;
+  }
+
+  .welcome-content {
+    margin-top: none;
   }
 
   .welcome-content header {
@@ -758,9 +761,14 @@
     padding: 6vh 0;
   }
 
+  .welcome-paragraph {
+    margin-top: none;
+    padding: 0;
+  }
+
   .welcome-text {
     text-align: center;
-    padding: 12vh 0 20vh 0;
+    padding-top: 6vh;
   }
 
   .btn-continue-welcome {
@@ -770,18 +778,46 @@
   }
 
   .sidebar-content header {
-    padding-top: 50%;
+    padding-top: 14%;
     font-size: 1.4rem;
   }
 
   .sidebar-content p {
-    padding-top: 5%;
+    padding: 5% 0 15% 0;
+    text-align: center;
+    max-width: none;
   }
 
   .skipbutton {
-    margin-right: 15%;
-    justify-content: flex-end;
     font-size: 1rem;
+    margin-right: 15%;
+    padding-bottom: 1.5vh;
+    justify-content: flex-end;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: none;
+  }
+
+  .sidebar-content {
+    margin-top: 10vh;
+  }
+  
+  .sidebar-paragraph {
+    padding: 12vh 0 5vh 0;
+  }
+
+  .logotipo {
+    padding: 5% 0;
+  }
+
+  .logoimg {
+    width: none;
+  }
+
+  .logotipo-conecte-comunique {
+    display: none;
   }
 
   /* FEED */
@@ -871,39 +907,63 @@
   }
 
   /*LANDING PAGES*/
-  .logotipo-mobile,
-  .logotipo {
+  .logotipo-mobile {
     display: none;
   }
   
+  .logotipo {
+    padding: 3% 12%;
+  }
+  
+  .logoimg {
+    width: 35%;
+  }
+
+  .welcome-content {
+    margin-top: 0;
+    width: 0;
+  }
+
   .welcome-bar-header {
-    padding: 12vh 0 3vh 0;
+    padding: 7vh 0 3vh 0;
   }
   
   .welcome-paragraph {
-    padding: 6.4rem 0;
+    padding: 3.4rem 0;
+    margin-top: 0;
   }
 
   .welcome-text {
-    margin-bottom: 29vh;
+    margin-bottom: 13vh;
   }
 
   .btn-continue-welcome {
     font-size: 0.9rem;
   }
 
+  .sidebar {
+    width: 100%
+  }
+
   .sidebar-content header {
-    padding-top: 40%;
+    padding-top: 15vh;
     font-size: 1.4rem;
   }
 
   .sidebar-content p {
     padding-top: 5%;
+    max-width: none;
   }
 
   .skipbutton {
     margin-right: 15%;
     justify-content: flex-end;
+  }
+
+  .text-conecte,
+  .text-comunique {
+    padding: 8% 8% 19% 8%;
+    text-align: center;
   }
 
   /* FEED */
