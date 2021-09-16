@@ -8,12 +8,12 @@ export const Welcome = () => {
       </section>
       <section class="welcome-bar">
         <div class="welcome-content">
-          <header>
+          <header class="welcome-bar-header">
             Bem-vinda, mulher!
           </header>
           <main class="welcome-paragraph">
             <p class="welcome-text">Fort é uma rede social exclusiva para mulheres!</p> 
-            <button class="btn-continue" id="btn-continue">Continuar</button>
+            <button class="btn-continue-welcome" id="btn-continue">Continuar</button>
             <button class="skipbutton">Pular</button>
           </section>
         </div>   
@@ -24,7 +24,7 @@ export const Welcome = () => {
   rootElement.setAttribute('class', 'container');
   rootElement.innerHTML = template;
 
-  const continueBtn = rootElement.querySelector('.btn-continue');
+  const continueBtn = rootElement.querySelector('.btn-continue-welcome');
   continueBtn.addEventListener('click', (event) => {
     event.preventDefault();
     navigation('/conecte');

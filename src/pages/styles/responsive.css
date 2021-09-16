@@ -200,7 +200,7 @@
   }
 
   .sidebar-content header {
-    padding-top: 50%;
+    /* padding-top: 50%; */
     font-size: 1.9rem;
   }
 
@@ -211,7 +211,10 @@
 
   .skipbutton {
     margin-right: 15%;
+    margin-top: 2vh;
+    padding-bottom: none;
     justify-content: flex-end;
+    font-size: large;
   }
 
   .content-welcome {
@@ -226,22 +229,68 @@
   }
 
   .welcome-bar {
-    margin-top: 26%;
+    margin-top: none;
   }
 
   .welcome-content header {
-    padding-top: 10%;
+    font-size: 2.3rem;
+  }
+
+  .welcome-bar-header {
+    padding: 18% 0% 7% 0%;
+  }
+
+  .welcome-text {
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .btn-continue-welcome {
     height: 4vh;
     width: 20vh;
+    margin-top: 33vh;
+    padding: 1.5rem;
   }
 
   .logoimg {
     width: 20vw;
     margin-bottom: 15vw;
   }
+
+  .content-conecte,
+  .content-comunique {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+ .logotipo-conecte-comunique,
+ .sidebar {
+    width: 50%;
+ }
+
+ .logoimg-conecte-comunique {
+    padding: 4%;
+    margin-top: 3%;
+    width: 36%;
+ }
+
+ .sidebar-paragraph {
+   padding: none;
+   padding-bottom: none;
+ }
+
+ .btn-continue-landing {
+  margin: 14vh 0 2vh 0;
+ }
+
+.header-sidebar-landing {
+  margin-top: 25vh;
+}
+
+.text-comunique {
+  padding: 5% 0 6% 0;
+}
 
   /* FEED */
   .mobile-list {
@@ -467,7 +516,7 @@
   /*LANDING-PAGES*/
 
   .sidebar-content header {
-    padding-top: 50%;
+    padding-top: 30%;
     font-size: 1.6rem;
   }
 
@@ -476,6 +525,10 @@
     font-size: 1.3rem;
   }
 
+  .logotipo {
+    padding: none;
+  }
+  
   .skipbutton {
     margin-right: 15%;
     justify-content: flex-end;
@@ -485,8 +538,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: flex-start;
+    height: 100vh;
+  }
+
+  .welcome-content {
+    height: none;
   }
 
   .welcome-bar,
@@ -494,18 +552,61 @@
     width: 50vw;
   }
 
-  .welcome-bar {
+  .welcome-content header {
+    font-size: 2rem;
+  }
+
+  .welcome-bar-header {
+    padding-bottom: 7vh;
+  }
+
+  /* .welcome-bar {
     margin-top: 25%;
+  } */
+
+  .welcome-text {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 18vh 0;
   }
 
   .btn-continue-welcome {
-    height: 4vh;
+    height: 6vh;
     width: 20vh;
   }
 
   .logoimg {
     width: 20vw;
-    margin-bottom: 35vw;
+    /* margin-bottom: 35vw; */
+  }
+
+  .content-comunique,
+  .content-conecte {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+  }
+
+  .logotipo-conecte-comunique {
+    width: 45%;
+  }
+
+  .logoimg-conecte-comunique {
+    width: 45%;
+  }
+
+  .sidebar {
+    width: 55%;
+  }
+
+  .header-sidebar-landing {
+    padding-top: 20%;
+  }
+
+  .text-conecte,
+  .text-comunique {
+    padding: 5% 0 12% 0;
   }
 
   /* FEED */
@@ -643,12 +744,29 @@
   }
 
   /*LANDING PAGES*/
-  .logotipo-mobile {
+  .logotipo-mobile,
+  .logoimg {
     display: none;
   }
 
   .welcome-content header {
-    padding-top: 10%;
+    /* padding: 6vh 0; */
+    font-size: 1.5rem;
+  }
+
+  .welcome-bar-header {
+    padding: 6vh 0;
+  }
+
+  .welcome-text {
+    text-align: center;
+    padding: 12vh 0 20vh 0;
+  }
+
+  .btn-continue-welcome {
+    margin-top: 13vh;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 
   .sidebar-content header {
@@ -663,6 +781,7 @@
   .skipbutton {
     margin-right: 15%;
     justify-content: flex-end;
+    font-size: 1rem;
   }
 
   /* FEED */
@@ -706,7 +825,9 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .side-navbar, .post-desktop {
+  
+  .side-navbar, 
+  .post-desktop {
     display: none;
   }
 
@@ -750,8 +871,25 @@
   }
 
   /*LANDING PAGES*/
-  .logotipo-mobile {
+  .logotipo-mobile,
+  .logotipo {
     display: none;
+  }
+  
+  .welcome-bar-header {
+    padding: 12vh 0 3vh 0;
+  }
+  
+  .welcome-paragraph {
+    padding: 6.4rem 0;
+  }
+
+  .welcome-text {
+    margin-bottom: 29vh;
+  }
+
+  .btn-continue-welcome {
+    font-size: 0.9rem;
   }
 
   .sidebar-content header {
@@ -862,6 +1000,24 @@
     display: none;
   }
 
+  .logotipo {
+    padding: 25%;
+    height: 47vh;
+  }
+
+  .welcome-bar{
+    height: none;
+  }
+
+  .welcome-content {
+    margin-top: none;
+  }
+
+  .welcome-bar-header {
+    font-size: 1.2rem;
+    padding-bottom: 2vh;
+  }
+
   .sidebar-content header {
     margin-top: 20%;
     font-size: 1.4rem;
@@ -869,6 +1025,8 @@
 
   .welcome-text {
     font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 12vh;
   }
 
   .skipbutton {

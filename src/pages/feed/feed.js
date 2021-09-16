@@ -32,7 +32,7 @@ export const Feed = () => {
         <span class="iconify" data-icon="bi:person-circle" style="color: #706f6b;"></span>
         <p class="text-sideBar">Perfil</p>
       </li>
-      <li class="item-side-navbar">
+      <li class="item-side-navbar btn-logout-sideBar">
         <span class="iconify" data-icon="ic:round-logout" style="color: #706f6b;"></span>
         <p class="text-logout-sidebar">Sair</p>
       </li>
@@ -156,6 +156,11 @@ export const Feed = () => {
 
   const logoutButton = rootElement.querySelector('.btn-logout');
   logoutButton.addEventListener('click', () => {
+    logout();
+  });
+
+  const logoutButtonSideBar = rootElement.querySelector('.btn-logout-sideBar');
+  logoutButtonSideBar.addEventListener('click', () => {
     logout();
   });
 
