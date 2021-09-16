@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
 /* WELCOME PAGE */
-.logotipo {
+.logotipo,
+.logotipo-conecte-comunique {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 25%;
+  /* padding: 25%; */
   background-image: url(../../img/opacobg.jpeg);
   background-repeat: repeat;
   /* filter: opacity(70%); */
 }
 
-.logoimg {
+.logoimg,
+.logoimg-conecte-comunique {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -20,7 +22,7 @@
 
 .welcome-bar {
   padding: 0;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -30,7 +32,7 @@
 
 .welcome-content {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,13 +45,13 @@
   justify-content: space-evenly;
   font-weight: 700;
   font-size: 1.3rem;
-  padding: 1rem;
-  padding-bottom: 2rem;
+  /* padding: 1rem;
+  padding-bottom: 2rem; */
   border-bottom: #a5a4a0 2px solid;
   letter-spacing: 0.017em;
 }
 
-.welcome-content p {
+p.welcome-content {
   display: flex;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -74,6 +76,7 @@
 /* OTHER PAGES */
 .sidebar {
   height: 100vh;
+  width: 50%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -92,12 +95,15 @@
   user-select: none;
 }
 
-.sidebar-content header {
+.sidebar-content header,
+.sidebar-content-landing {
   font-weight: 700;
   font-size: 1.2rem;
+  letter-spacing: 0.017em;
   padding: 1rem;
   border-bottom: #a5a4a0 2px solid;
-  letter-spacing: 0.017em;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar-paragraph {
@@ -108,21 +114,19 @@
   height: 100%;
   padding: 0;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 10vh;
 }
 
 .sidebar-content p {
   display: flex;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
-.sidebar-content header {
-  display: flex;
-  justify-content: center;
+.header-sidebar-landing {
+  padding-top: 0;
 }
-
 
 /* CONFIG GERAL */
 .skipbutton {
@@ -132,20 +136,20 @@
   width: 100%;
   padding: 0;
   margin-top: 25px;
-  padding-bottom: 10%;
-  
+  /* padding-bottom: 10%; */
   color: var(--color-primary);
   background: transparent;
-
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   text-transform: uppercase;
 }
 
-.btn-continue {
+.btn-continue,
+.btn-continue-welcome,
+.btn-continue-landing {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 55%;
+  /* margin-top: 55%; */
   background-color: var(--color-primary);
   border-radius: 50px;
   width: 130px;

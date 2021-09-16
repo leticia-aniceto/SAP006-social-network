@@ -3,17 +3,17 @@ import { navigation } from '../../navigation.js';
 export const Comunique = () => {
   const template = `
   <section class="content-comunique">
-    <section class="logotipo logotipo-mobile">
-      <img src="./img/logo.png" alt="Logotipo do Fort" class="logoimg">
+    <section class="logotipo-conecte-comunique logotipo-mobile">
+      <img src="./img/logo.png" alt="Logotipo do Fort" class="logoimg-conecte-comunique">
     </section>
     <section class="sidebar"> 
       <div class="sidebar-content">
-        <header>
+        <header class="header-sidebar-landing">
           Comunique-se...
         </header>
         <section class="sidebar-paragraph">
-          <p>Compartilhe suas opiniões, vivências e o que mais der na telha, sem medo de ser julgada!</p> 
-          <button class="btn-continue" id="btn-continue">Continuar</button>
+          <p class="text-comunique">Compartilhe suas opiniões, vivências e o que mais der na telha, sem medo de ser julgada!</p> 
+          <button class="btn-continue-landing" id="btn-continue">Continuar</button>
           <button class="skipbutton">Pular</button>
         </section>
       </div>
@@ -25,7 +25,7 @@ export const Comunique = () => {
   rootElement.setAttribute('class', 'container');
   rootElement.innerHTML = template;
 
-  const continueBtn = rootElement.querySelector('.btn-continue');
+  const continueBtn = rootElement.querySelector('.btn-continue-landing');
   continueBtn.addEventListener('click', () => {
     navigation('/login');
   });
