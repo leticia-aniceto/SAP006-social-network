@@ -121,7 +121,7 @@ p.welcome-content {
   display: flex;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
 .header-sidebar-landing {

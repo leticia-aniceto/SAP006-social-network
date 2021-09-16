@@ -1078,6 +1078,10 @@
     padding-bottom: 2vh;
   }
 
+  .sidebar {
+    width: 100%;
+  }
+
   .sidebar-content header {
     margin-top: 20%;
     font-size: 1.4rem;
@@ -1094,6 +1098,15 @@
     justify-content: flex-end;
   }
 
+  .text-comunique,
+  .text-conecte {
+    padding: 10vh 6vh;
+    max-width: none;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  /* feed */
   .container-areaPost {
     margin-left: 7%;
   }
