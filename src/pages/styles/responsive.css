@@ -125,7 +125,7 @@
   }
 
   .inputAndReset {
-    margin-top: 15%;
+    margin-top: 9%;
   }
 
   .login-input-email,
@@ -671,11 +671,17 @@
   }
 
   .sectionLogin-header-title {
-    padding: 0% 0% 5% 5%;
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
   }
 
   .header-title {
-    font-size: 2.2em;
+    font-size: 3.2em;
+    font-weight: 500;
+    justify-content: left;
   }
 
   .login-redirect-signup {
@@ -685,13 +691,14 @@
   }
 
   .mainSectionLogin-background-opacity {
-    padding: 0% 5% 5% 5%;
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
   }
 
   .inputAndReset {
-    margin-top: 20%;
+    margin-top: 25%;
   }
-
+  
   h3 {
     font-size: 1.5rem;
     padding: 0%;
@@ -743,6 +750,7 @@
   p {
     font-size: 1.0rem;
   }
+
 
   /*LANDING PAGES*/
   .logotipo-mobile {
@@ -879,6 +887,29 @@
   h2 {
     font-size: 2rem;
     padding-left: 20%;
+  }
+
+  .sectionLogin-header-title {
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 3.2em;
+    font-weight: 500;
+    justify-content: left;
+  }
+
+  .mainSectionLogin-background-opacity {
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
+  }
+
+  .inputAndReset {
+    margin-top: 30%;
   }
 
   h3 {
@@ -1020,6 +1051,29 @@
     padding: 1%;
   }
 
+  .sectionLogin-header-title {
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 2.2em;
+    font-weight: 500;
+    justify-content: left;
+  }
+
+  .mainSectionLogin-background-opacity {
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
+  }
+
+  .inputAndReset {
+    margin-top: 30%;
+  }
+
   .value-register {
     height: 7vh;
     width: 55vw;
@@ -1034,6 +1088,12 @@
   .login-input-email,
   .login-input-password {
     width: 38vh;
+    padding: 2%;
+    border-radius: 2vh;
+  }
+
+  .reset-password {
+    font-size: 1rem;
   }
 
   .btn-login {
@@ -1041,10 +1101,6 @@
     width: 25vh;
     font-weight: 600;
     font-size: 1.25rem;
-  }
-
-  .btn-google {
-    width: 72%;
   }
 
   .go-login {
