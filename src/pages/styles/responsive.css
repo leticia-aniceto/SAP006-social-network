@@ -115,7 +115,7 @@
   .login-title-community {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     font-size: 1.8vw;
     font-style: normal;
     font-weight: bold;
@@ -125,13 +125,14 @@
   }
 
   .inputAndReset {
-    margin-top: 15%;
+    margin-top: 9%;
   }
 
   .login-input-email,
   .login-input-password,
   .value-register {
-    height: 2vw;
+    /* height: 2vw; */
+    padding: 2.5%;
     width: 30vw;
     filter: drop-shadow(0px 4.97967px 3.73476px rgba(0, 0, 0, 0.15));
   }
@@ -671,11 +672,17 @@
   }
 
   .sectionLogin-header-title {
-    padding: 0% 0% 5% 5%;
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
   }
 
   .header-title {
-    font-size: 2.2em;
+    font-size: 3.2em;
+    font-weight: 500;
+    justify-content: left;
   }
 
   .login-redirect-signup {
@@ -685,15 +692,16 @@
   }
 
   .mainSectionLogin-background-opacity {
-    padding: 0% 5% 5% 5%;
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
   }
 
   .inputAndReset {
-    margin-top: 40%;
+    margin-top: 30%;
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 5%;
     color: var(--color-primary);
   }
@@ -742,6 +750,7 @@
   p {
     font-size: 1.2rem;
   }
+
 
   /*LANDING PAGES*/
   .logotipo-mobile {
@@ -812,6 +821,13 @@
     padding: 5% 0;
   }
 
+  .login-input-email, .login-input-password {
+    padding: 3%;
+    border-radius: 2vh;
+    width: 80%;
+    padding: 2%;
+  }
+
   .logoimg {
     width: none;
   }
@@ -878,6 +894,29 @@
   h2 {
     font-size: 2rem;
     padding-left: 20%;
+  }
+
+  .sectionLogin-header-title {
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 3.2em;
+    font-weight: 500;
+    justify-content: left;
+  }
+
+  .mainSectionLogin-background-opacity {
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
+  }
+
+  .inputAndReset {
+    margin-top: 30%;
   }
 
   h3 {
@@ -1013,6 +1052,29 @@
     color: var(--color-primary);
   }
 
+  .sectionLogin-header-title {
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 2.2em;
+    font-weight: 500;
+    justify-content: left;
+  }
+
+  .mainSectionLogin-background-opacity {
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
+  }
+
+  .inputAndReset {
+    margin-top: 30%;
+  }
+
   .value-register {
     height: 12vw;
     width: 65vw;
@@ -1026,6 +1088,12 @@
   .login-input-email,
   .login-input-password {
     width: 38vh;
+    padding: 2%;
+    border-radius: 2vh;
+  }
+
+  .reset-password {
+    font-size: 1rem;
   }
 
   .btn-login {
@@ -1033,10 +1101,6 @@
     width: 25vh;
     font-weight: 600;
     font-size: 1.25rem;
-  }
-
-  .btn-google {
-    width: 72%;
   }
 
   .go-login {
