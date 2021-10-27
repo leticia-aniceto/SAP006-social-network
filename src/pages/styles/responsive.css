@@ -115,7 +115,7 @@
   .login-title-community {
     display: flex;
     justify-content: center;
-    /* margin-top: 10%; */
+    margin-top: 10%;
     font-size: 1.8vw;
     font-style: normal;
     font-weight: bold;
@@ -124,15 +124,14 @@
     text-shadow: 0px 9.00986px 9.00986px rgba(0, 0, 0, 0.1);
   }
 
-    .inputAndReset {
-    margin-top: 9%;
+  .inputAndReset {
+    margin-top: 15%;
   }
 
   .login-input-email,
   .login-input-password,
   .value-register {
-    /* height: 2vw; */
-    padding: 2.5%;
+    height: 2vw;
     width: 30vw;
     filter: drop-shadow(0px 4.97967px 3.73476px rgba(0, 0, 0, 0.15));
   }
@@ -192,99 +191,106 @@
   }
 
   /*LANDING PAGES*/
+  .background-color-main-signup {
+    overflow: hidden;
+  }
+
+  .btn-continue-welcome {
+    font-size: 1rem;
+  }
+
   .sidebar-content header {
-    padding-top: 30%;
-    font-size: 1.6rem;
+    /* padding-top: 50%; */
+    font-size: 1.9rem;
   }
 
   .sidebar-content p {
     padding-top: 5%;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
-  .logotipo {
-    padding: none;
-  }
-  
   .skipbutton {
     margin-right: 15%;
+    margin-top: 2vh;
+    padding-bottom: none;
     justify-content: flex-end;
+    font-size: large;
   }
 
   .content-welcome {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    /* align-items: center; */
-    justify-content: flex-start;
-    height: 100vh;
-  }
-
-  .welcome-content {
-    height: none;
   }
 
   .welcome-bar,
   .logotipo {
     width: 50vw;
+    padding: 0;
+  }
+
+  .welcome-bar {
+    margin-top: none;
   }
 
   .welcome-content header {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   .welcome-bar-header {
-    padding-bottom: 7vh;
+    padding: 18% 0% 7% 0%;
   }
-
-  /* .welcome-bar {
-    margin-top: 25%;
-  } */
 
   .welcome-text {
     font-size: 1.5rem;
     text-align: center;
-    padding: 18vh 0;
   }
 
   .btn-continue-welcome {
-    height: 6vh;
+    height: 4vh;
     width: 20vh;
+    margin-top: 33vh;
+    padding: 1.5rem;
   }
 
   .logoimg {
     width: 20vw;
-    /* margin-bottom: 35vw; */
+    margin-bottom: 15vw;
   }
 
-  .content-comunique,
-  .content-conecte {
+  .content-conecte,
+  .content-comunique {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
+  
+ .logotipo-conecte-comunique,
+ .sidebar {
+    width: 50%;
+ }
 
-  .logotipo-conecte-comunique {
-    width: 45%;
-  }
+ .logoimg-conecte-comunique {
+    padding: 4%;
+    margin-top: 3%;
+    width: 36%;
+ }
 
-  .logoimg-conecte-comunique {
-    width: 45%;
-  }
+ .sidebar-paragraph {
+   padding: none;
+   padding-bottom: none;
+ }
 
-  .sidebar {
-    width: 55%;
-  }
+ .btn-continue-landing {
+  margin: 14vh 0 2vh 0;
+ }
 
-  .header-sidebar-landing {
-    padding-top: 20%;
-  }
+.header-sidebar-landing {
+  margin-top: 25vh;
+}
 
-  .text-conecte,
-  .text-comunique {
-    padding: 5% 0 12% 0;
-  }
+.text-comunique {
+  padding: 5% 0 6% 0;
+}
 
   /* FEED */
   .mobile-list {
@@ -419,7 +425,7 @@
   }
 
   .infos-user {
-    margin-top: 25%;
+    margin-top: auto;
   }
 
   .login-redirect-signup {
@@ -455,7 +461,7 @@
   }
 
   .value-register {
-    height: 5vw;
+    height: 8vh;
     width: 30vw;
     filter: drop-shadow(0px 4.97967px 3.73476px rgba(0, 0, 0, 0.15));
   }
@@ -683,12 +689,12 @@
   }
 
   .inputAndReset {
-    margin-top: 40%;
+    margin-top: 20%;
   }
 
   h3 {
-    font-size: 1.8rem;
-    padding: 5%;
+    font-size: 1.5rem;
+    padding: 0%;
     color: var(--color-primary);
   }
 
@@ -702,15 +708,16 @@
   }
 
   .value-register {
-    height: 3vw;
-    width: 55vw;
+    height: 7vh;
+    width: 35vw;
+    margin: 0.8%;
   }
 
   .btn-Signup,
   .btn-continue {
     height: 6vh;
     width: 30vh;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
 
   .reset-password {
@@ -730,106 +737,88 @@
   }
 
   .infos-user {
-    margin-top: 30%;
+    margin-top: auto;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
 
   /*LANDING PAGES*/
-  .sidebar-content header {
-    padding-top: 30%;
-    font-size: 1.6rem;
-  }
-
-  .sidebar-content p {
-    padding-top: 5%;
-    font-size: 1.3rem;
-  }
-
-  .logotipo {
-    padding: none;
-  }
-  
-  .skipbutton {
-    margin-right: 15%;
-    justify-content: flex-end;
-  }
-
-  .content-welcome {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    /* align-items: center; */
-    justify-content: flex-start;
-    height: 100vh;
+  .logotipo-mobile {
+    display: none;
   }
 
   .welcome-content {
-    height: none;
-  }
-
-  .welcome-bar,
-  .logotipo {
-    width: 50vw;
+    margin-top: none;
   }
 
   .welcome-content header {
-    font-size: 2rem;
+    /* padding: 6vh 0; */
+    font-size: 1.5rem;
   }
 
   .welcome-bar-header {
-    padding-bottom: 7vh;
+    padding: 6vh 0;
   }
 
-  /* .welcome-bar {
-    margin-top: 25%;
-  } */
+  .welcome-paragraph {
+    margin-top: none;
+    padding: 0;
+  }
 
   .welcome-text {
-    font-size: 1.5rem;
     text-align: center;
-    padding: 18vh 0;
+    padding-top: 6vh;
   }
 
   .btn-continue-welcome {
-    height: 6vh;
-    width: 20vh;
+    margin-top: 13vh;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 
-  .logoimg {
-    width: 20vw;
-    /* margin-bottom: 35vw; */
+  .sidebar-content header {
+    padding-top: 14%;
+    font-size: 1.4rem;
   }
 
-  .content-comunique,
-  .content-conecte {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
+  .sidebar-content p {
+    padding: 5% 0 15% 0;
+    text-align: center;
+    max-width: none;
   }
 
-  .logotipo-conecte-comunique {
-    width: 45%;
-  }
-
-  .logoimg-conecte-comunique {
-    width: 45%;
+  .skipbutton {
+    font-size: 1rem;
+    margin-right: 15%;
+    padding-bottom: 1.5vh;
+    justify-content: flex-end;
   }
 
   .sidebar {
-    width: 55%;
+    width: 100%;
+    height: none;
   }
 
-  .header-sidebar-landing {
-    padding-top: 20%;
+  .sidebar-content {
+    margin-top: 10vh;
+  }
+  
+  .sidebar-paragraph {
+    padding: 12vh 0 5vh 0;
   }
 
-  .text-conecte,
-  .text-comunique {
-    padding: 5% 0 12% 0;
+  .logotipo {
+    padding: 5% 0;
+  }
+
+  .logoimg {
+    width: none;
+  }
+
+  .logotipo-conecte-comunique {
+    display: none;
   }
 
   /* FEED */
@@ -893,80 +882,70 @@
   }
 
   h3 {
-    font-size: 1.5rem;
-    padding: 5%;
+    font-size: 1.4rem;
     color: var(--color-primary);
+    padding: 0%;
   }
 
   .infos-user {
-    margin-top: 20%;
+    margin-top: auto;
   }
 
   .value-register {
-    height: 11vw;
-    width: 55vw;
+    height: 7vh;
+    width: 40vw;
+    margin: 1%;
   }
 
-  .btn-Signup,
+  
   .btn-continue {
     height: 5vh;
     width: 25vh;
     font-size: 1rem;
   }
 
+  .btn-Signup {
+    height: 7vh;
+    width: 30vw;
+    margin: 4%;
+  }
+
   p {
     font-size: 1.1rem;
   }
 
-  /*LANDING PAGES*/
   .logotipo-mobile {
     display: none;
   }
-
+  
   .logotipo {
-    padding: 25%;
-    height: 47vh;
+    padding: 3% 12%;
   }
-
-  .welcome-bar{
-    height: none;
+  
+  .logoimg {
+    width: 35%;
   }
 
   .welcome-content {
-    margin-top: none;
+    margin-top: 0;
+    width: 0;
   }
 
   .welcome-bar-header {
-    font-size: 1.2rem;
-    padding-bottom: 2vh;
+    padding: 7vh 0 3vh 0;
   }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .sidebar-content header {
-    margin-top: 20%;
-    font-size: 1.4rem;
+  
+  .welcome-paragraph {
+    padding: 3.4rem 0;
+    margin-top: 0;
   }
 
   .welcome-text {
-    font-size: 1.2rem;
-    text-align: center;
-    padding-bottom: 12vh;
+    margin-bottom: 13vh;
   }
 
-  .skipbutton {
-    margin-right: 15%;
-    justify-content: flex-end;
-  }
-
-  .text-comunique,
-  .text-conecte {
-    padding: 10vh 6vh;
-    max-width: none;
-    text-align: center;
-    font-size: 1rem;
+  .btn-continue-welcome {
+    font-size: 0.9rem;
   }
 
   .sidebar {
@@ -1032,18 +1011,19 @@
   }
 
   .infos-user {
-    margin-top: 10%;
+    margin-top: auto;
   }
 
   h3 {
     font-size: 1.4rem;
-    padding: 10%;
     color: var(--color-primary);
+    padding: 1%;
   }
 
   .value-register {
-    height: 12vw;
-    width: 65vw;
+    height: 7vh;
+    width: 55vw;
+    margin: 1.5%;
   }
 
   .btn-Signup {
