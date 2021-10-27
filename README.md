@@ -97,6 +97,19 @@ Ao clicar em "voltar", visualizar a home.
 
 ## 3. A aplicação 📱 🧵
 
+<br>
+
+<div>
+ 
+  <h4> Você pode acessar a aplicação utilizando o login de teste abaixo:</h4>
+
+
+| Usuário             	|             Email          	|               Senha    	|
+|:---------------------:|:----------------------------:	|:---------------------:|
+|     Teste 1             	|            teste001@gmail.com     |     1234567
+
+</div>
+
 🪡 **Onboarding pages**
 _Versão mobile_
 _Versão desktop_
