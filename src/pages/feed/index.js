@@ -8,7 +8,7 @@ export const Feed = () => {
       </div> 
       <section class="post">
         <form action="" id="published-form">
-        <input type="text" id="text-post" placeholder="Mana, o que você quer compatilhar?">
+        <input type="text" id="text-post" placeholder="Mana, o que você quer compartilhar?">
         <button class="btn" id="send-post">Enviar</button>
         </form>
       </section>
@@ -23,7 +23,7 @@ export const Feed = () => {
     const text = rootElement.querySelector('#text-post').value;
     // console.log(text);
     const post = {
-      text,
+      text: text,
       user_id: firebase.auth().currentUser.uid,
       likes: 0,
       comments: [],
@@ -36,23 +36,9 @@ export const Feed = () => {
   function deletePost(postId) {
     const collectionOfPosts = firebase.firestore().collection('posts');
     collectionOfPosts.doc(postId).delete()
-      .then((doc) => {
-        loadPosts();
-      });
+    .then(doc => {
+      loadPosts()
+    });
   }
-
-  // Objetos com propriedades utilizadas nos posts:
-  // const user = firebase.auth().currentUser;
-  // if (user !== null) {
-  //   const email = user.email;
-  //   const uid = user.uid;
-  // }
-
-  // Criar a collection:
-
-  // .then(() => {
-  //   rootElement.querySelector('#text-post').value = '';
-  //   rootElement.querySelector('#post-ready').innerHTML = '';
-  // });
   return rootElement;
 };

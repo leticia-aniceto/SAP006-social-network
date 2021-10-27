@@ -48,6 +48,7 @@ export const Feed = () => {
       
       <hr class="line">
       <h4 class="recent">Olá, ${displayName}!</h4>
+
       <section class="post-desktop">
         <form action="" id="published-form-desktop" class="published-form-desktop">
           <input type="text" id="text-post-desktop" name="new-post" class="form-input-newpost-desktop" placeholder="Mana, o que você quer compatilhar?">
@@ -55,10 +56,12 @@ export const Feed = () => {
           <button class="btn-send-desktop btn-send" id="send-post">Enviar</button>
         </form>
       </section>
+
       <section class="post">
         <div class="post-before">
           <p class="header-post-before">POST</p>
         </div>
+
         <form action="" id="published-form" class="published-form">
           <input type="text" id="text-post" name="new-post" class="form-input-newpost" placeholder="Mana, o que você quer compatilhar?">
           <p class="warn-input-add" hidden>Por favor, digite algo para compartilhar.</p>
@@ -99,7 +102,9 @@ export const Feed = () => {
           <input type="file" name="arquivo" id="input-file" class="profile-pic">
         </div>
       </div>
+
       <input type="text" class="profile-username" id="profile-username" placeholder="Nome de usuária...">
+
       <div class="profile-buttons">
         <button class="btn-logout">
           <span class="iconify logout-icon-bcgcolor" data-icon="ic:round-logout" style="color: #f78563; background-color: white;"></span>
