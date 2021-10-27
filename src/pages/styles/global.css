@@ -70,7 +70,7 @@ ol, ul {
   font-weight: 500;
   font-size: medium;
   color: var(--color-gray);
-  padding: 5%;
+  padding: 1.5%;
   margin: 2%;
   display: inline-flex;
 }
