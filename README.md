@@ -110,43 +110,53 @@ Ao clicar em "voltar", visualizar a home.
 
 </div>
 
-🪡 **Onboarding pages**
+### 📌 Onboarding pages </br>
 _Versão mobile_
-_Versão desktop_
+<div  display="inline">
+      <img src="./src/img/onboarding-mobile.gif" style="height: 100vh; width:50vh;">
 
-🪡 **Login**
-_Versão mobile_
-_Versão desktop_
+_Versão desktop_ </br>
+      <img src="./src/img/welcome-desktop.gif" style="height: 50vh; width: 100vh;">
+</div>
+### 📌 Login </br>
+_Versão mobile_ </br>
+      <img src="./src/img/login-mobile.png" style="height: 100vh; width:50vh;">
 
-
-🪡 **Cadastro**
-_Versão mobile_
-_Versão desktop_
-
-
-🪡 **Recuperar Senha** 
-_Versão mobile_
-_Versão desktop_
-
-🪡 **Feed** 
-_Versão mobile_
-_Versão desktop_
+_Versão desktop_ </br>
+      <img src="./src/img/login-desktop.png" style="height: 50vh; width: 100vh;">
 
 
-🪡 **Criação de post**
+### 📌 Cadastro </br>
+_Versão mobile_ </br>
+      <img src="./src/img/signup-mobile.png" style="height: 100vh; width:50vh;">
+
+_Versão desktop_ </br>
+      <img src="./src/img/signup-desktop.png" style="height: 50vh; width: 100vh;">
+      
+
+### 📌 Feed  </br>
+_Versão mobile_ </br>
+      <img src="./src/img/signup-mobile.png" style="height: 100vh; width:50vh;">
+
+_Versão desktop_ </br>
+      <img src="./src/img/feed-desktop.png" style="height: 50vh; width: 100vh;">
 
 
-
-🪡 **Edição e exclusão de post**
-
-
-🪡 **Curtir e descurtir post**
+�### 📌 Criação de post </br>
+      <img src="./src/img/post-mobile.png" style="height: 100vh; width:50vh;">
 
 
-🪡 **Perfil**
-_Versão mobile_
-_Versão desktop_
+�### 📌 Edição e exclusão de post </br>
+      <img src="./src/img/edit-post.gif" style="height: 100vh; width:50vh;">
 
+
+�### 📌 Curtir e descurtir post </br>
+      <img src="./src/img/likes.gif" style="height: 100vh; width:50vh;">
+
+
+�### 📌 Perfil </br>
+      <img src="./src/img/profile-mobile.png" style="height: 100vh; width:50vh;">
+      
 
 ## 4. Critérios de aceitação do projeto 🏆
 
