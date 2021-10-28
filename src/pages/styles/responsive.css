@@ -115,7 +115,7 @@
   .login-title-community {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     font-size: 1.8vw;
     font-style: normal;
     font-weight: bold;
@@ -131,7 +131,8 @@
   .login-input-email,
   .login-input-password,
   .value-register {
-    height: 2vw;
+    /* height: 2vw; */
+    padding: 2.5%;
     width: 30vw;
     filter: drop-shadow(0px 4.97967px 3.73476px rgba(0, 0, 0, 0.15));
   }
@@ -821,6 +822,13 @@
     padding: 5% 0;
   }
 
+  .login-input-email, .login-input-password {
+    padding: 3%;
+    border-radius: 2vh;
+    width: 80%;
+    padding: 2%;
+  }
+
   .logoimg {
     width: none;
   }
@@ -1049,6 +1057,29 @@
     font-size: 1.4rem;
     color: var(--color-primary);
     padding: 1%;
+  }
+
+  .sectionLogin-header-title {
+    padding: 1% 0% 0% 5%;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 2.2em;
+    font-weight: 500;
+    justify-content: left;
+  }
+
+  .mainSectionLogin-background-opacity {
+    padding: 0% 5% 2% 5%;
+    justify-content: center;
+  }
+
+  .inputAndReset {
+    margin-top: 30%;
   }
 
   .sectionLogin-header-title {
